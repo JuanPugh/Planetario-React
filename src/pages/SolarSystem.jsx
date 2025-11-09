@@ -1,8 +1,34 @@
+//import "../CSS/solar_system.css";
+
+function showinfo(element) {
+    const info = element.querySelector('.info')
+    const rect = element.getBoundingClientRect();
+    const windowWidth = window.innerWidth;
 
 
-export default function () {
+    // console.log("Rect: " + rect.right)
+    // console.log("Window width: " + windowWidth);
+    // console.log("info width: " + info.offsetWidth);
+
+
+    // Detectar si el planeta está cerca del borde derecho
+    // Sumo 400 de offset asi tambien se aplica el efecto en jupiter
+    if (rect.right + info.offsetWidth + 400 > windowWidth) {
+
+        // Posiciona la infomracion a la izquierda
+        info.style.left = "auto"; //Sin esto no funciona
+        info.style.right = '120%';
+    } else {
+        //Posicion la informacion a la derecha
+        info.style.right = "auto"; //Sin esto no funciona
+        info.style.left = '120%';
+    }
+}
+
+export default function SolarSystem() {
+
     return (
-        <div class="container-element">
+        <div>
             <div class="title"> <h1>SISTEMA SOLAR</h1> </div>
 
 
@@ -98,7 +124,6 @@ export default function () {
                 </div>
 
             </div>
-            <script src="js/script.js"></script>
         </div>
     );
 }

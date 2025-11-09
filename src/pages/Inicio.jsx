@@ -1,5 +1,6 @@
 import Header from "../components/header";
 import Footer from "../components/footer";
+import { Link } from "react-router-dom";
 
 export default function Inicio() {
     return (
@@ -29,10 +30,12 @@ export default function Inicio() {
                         <h2>Galaxias Vecinas</h2>
                         <p>Estamos solos?</p>
                     </a>
-                    <a href="solar_system.html" class="educacion cont">
+
+                    <Link to="/SolarSystem" class="educacion cont">
                         <h2>Aprende acerca de nuestro hogar</h2>
                         <p>Espacio educativo &RightArrow;</p>
-                    </a>
+                    </Link>
+
                     <a href="productos.html" class="productos cont">
                         <h2>Productos</h2>
                         <p>Nuevas emociones &#128230;</p>

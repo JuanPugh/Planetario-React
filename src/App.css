@@ -14,6 +14,7 @@
 body {
   font-family: Rajdhani;
   background-color: #000919;
+
 }
 
 .container-element {
@@ -400,3 +401,111 @@ footer p {
 }
 
 /*---------------------------------------------------------*/
+
+
+
+
+
+
+/**************************************************************************************************************
+**************************************************************************************************************
+                                          HORARIOS
+**************************************************************************************************************
+***************************************************************************************************************/
+
+.container {
+  flex-wrap: wrap;
+  position: relative;
+  padding: 30px;
+  margin: 10% auto;
+
+  width: fit-content;
+  height: fit-content;
+
+  border-radius: 25px;
+  box-shadow: 2px 2px 100px rgb(255, 255, 255, 0.2);
+
+  background: url("src/assets/Horarios/bg_table.jpg") fixed no-repeat;
+  background-size: cover;
+  background-color: #0000006c;
+  background-blend-mode: darken;
+
+  filter: saturate(95%);
+}
+
+.container h2 {
+  margin: 5%;
+
+  text-align: center;
+  font-size: 70px;
+  color: transparent;
+
+  background-color: rgba(0, 0, 0, 0.092);
+  background-image: linear-gradient(#4dafd970, #2f74a261);
+  background-clip: text;
+
+  filter: saturate(500%);
+
+}
+
+.tabla {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  gap: 30px;
+
+}
+
+.fila {
+  display: contents;
+}
+
+.celda {
+
+  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.1), -1px -1px 5px rgba(255, 255, 255, 0.1);
+  border-radius: 5px 10px;
+
+  align-content: center;
+
+  padding: 10px;
+
+  font-size: 15px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 1px rgb(0, 0, 0);
+  color: #ffffffff;
+  overflow-wrap: break-word;
+
+  height: 50px;
+  width: 200px;
+
+  background-image: url("src/assets/Horarios/Horarios/bg_cell.jpg");
+  background-blend-mode: darken;
+  background-color: #00091962;
+  background-size: cover;
+
+  transition: all .5s ease-in-out;
+
+}
+
+.celda:hover {
+  transform: translateY(-10px);
+  box-shadow: 2px 2px 20px rgb(255, 255, 255, 0.5);
+}
+
+.celda:nth-last-child(5) {
+  background-image: url("src/assets/Horarios/bg_cols1.jfif");
+  background-blend-mode: lighten;
+
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.fila:first-child .celda {
+  background-image: url("src/assets/Horarios/Horarios/bg_row1.jpg");
+  background-blend-mode: darken;
+
+  font-weight: bolder;
+  font-size: 25px;
+
+  border-radius: 30px 10px 30px 10px;
+}
