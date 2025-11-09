@@ -1,15 +1,10 @@
-//import "../CSS/solar_system.css";
+//import styles from "../CSS/solar_system.module.css";
+import Planet from "../components/planet";
 
 function showinfo(element) {
     const info = element.querySelector('.info')
     const rect = element.getBoundingClientRect();
     const windowWidth = window.innerWidth;
-
-
-    // console.log("Rect: " + rect.right)
-    // console.log("Window width: " + windowWidth);
-    // console.log("info width: " + info.offsetWidth);
-
 
     // Detectar si el planeta está cerca del borde derecho
     // Sumo 400 de offset asi tambien se aplica el efecto en jupiter
@@ -29,11 +24,11 @@ export default function SolarSystem() {
 
     return (
         <div>
-            <div class="title"> <h1>SISTEMA SOLAR</h1> </div>
+            <div className={styles.title}> <h1>SISTEMA SOLAR</h1> </div>
 
 
-            <div class="container-planet">
-                <div class="sun" onmouseover="showinfo(this)">
+            <div className={`styles.container planet`}>
+                <div className="sun" onmouseover="showinfo(this)">
                     <div class="info">
                         <h2>Sol</h2>
                         <p>El Sol es una estrella de tipo G2V compuesta principalmente por hidrógeno
@@ -45,14 +40,10 @@ export default function SolarSystem() {
                     </div>
                 </div>
 
-                <div class="planet mercury" onmouseover="showinfo(this)">
-                    <div class="info">
-                        <h2>Mercurio</h2>
-                        <p>Es el planeta más cercano al Sol y el más pequeño del Sistema Solar.
+                <Planet name="Mercury" description="Es el planeta más cercano al Sol y el más pequeño del Sistema Solar.
                             Tiene temperaturas extremas debido a su delgada atmósfera y la cercanía al Sol: muy caliente de día y extremadamente frío de noche.
-                            Carece de lunas.</p>
-                    </div>
-                </div>
+                            Carece de lunas."></Planet>
+
 
                 <div class="planet venus" onmouseover="showinfo(this)">
                     <div class="venus-atmosphere"></div>
@@ -124,6 +115,6 @@ export default function SolarSystem() {
                 </div>
 
             </div>
-        </div>
+        </div >
     );
 }

@@ -1,6 +1,7 @@
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { Link } from "react-router-dom";
+//import styles from "../CSS/inicio.module.css";
 
 export default function Inicio() {
     return (
@@ -18,18 +19,18 @@ export default function Inicio() {
                         <h2>Recorridos</h2>
                         <p>Al infinito y...</p>
                     </a>
-                    <a href="horario.html" class="horarios half">
+                    <Link to="/Horarios" class="horarios half">
                         <h2>Horarios</h2>
                         <p>Cuando puedes visitarnos &starf;</p>
-                    </a>
+                    </Link>
                     <a href="#" class="ubicacion half">
                         <h2>Ubicanos</h2>
                         <p>El lugar perfecto &star;</p>
                     </a>
-                    <a href="galaxias_vecinas.html" class="galaxias half">
+                    <Link to="/GalaxiasVecinas" class="galaxias half">
                         <h2>Galaxias Vecinas</h2>
                         <p>Estamos solos?</p>
-                    </a>
+                    </Link>
 
                     <Link to="/SolarSystem" class="educacion cont">
                         <h2>Aprende acerca de nuestro hogar</h2>
