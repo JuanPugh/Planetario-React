@@ -1,9 +1,4 @@
-* {
-
-    margin: 0;
-}
-
-.container-content {
+.container-galaxias {
 
     width: 80%;
     display: flex;
@@ -16,30 +11,30 @@
     background: linear-gradient(to right, #100e17, #18192c, #100e17);
     box-shadow: 5px 5px 75px rgba(255, 255, 255, 0.177), -5px -5px 75px rgba(255, 255, 255, 0.177);
     padding: 30px 25px 30px 25px;
-    margin: 10% 0% 10% 0%;
+    margin: 5% auto;
 }
 
 .title {
     padding: 10px;
 }
 
-h2 {
+.container-galaxias h2 {
     color: #ffffff;
     font-size: 60px;
     text-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
 }
 
-h3 {
+.container-galaxias h3 {
     color: #ffffff;
     font-size: 25px;
     margin-bottom: 10px;
 }
 
-p {
+.container-galaxias p {
     color: #ffffff;
 }
 
-.content img {
+.content-galaxia img {
     height: 330px;
     width: 48%;
     padding: 15px;
@@ -47,7 +42,7 @@ p {
     filter: saturate(200%);
 }
 
-.content {
+.content-galaxia {
     margin: 20px;
     border-radius: 15px;
     display: flex;

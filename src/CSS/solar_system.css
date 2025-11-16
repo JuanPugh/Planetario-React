@@ -1,49 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap");
-
-* {
-    margin: 0;
-    font-family: Oxanium;
-
-}
-
-body {
+.system-solar {
 
     background-image: url("src/assets/planets/bg_space2.jpg");
     background-position: 0%;
     background-attachment: fixed;
-    overflow: hidden;
-
+    width: 100vw;
+    height: 100vh;
     animation: bg_rotation 200s linear infinite;
+    overflow: hidden;
 }
 
-@keyframes bg_rotation {
-
-    0% {
-        background-position: 0%;
-    }
-
-    100% {
-        background-position: 370%;
-    }
-}
 
 
 .title {
     height: 15vh;
     align-content: center;
-
+    
     grid-template-rows: 200px 800px 300px;
 }
 
-h1 {
-
+.system-solar h1{
+    
     color: white;
     font-size: 50px;
     text-align: center;
 }
 
 .container-planet {
-
+    
     position: relative;
     width: 100vw;
     height: 80vh;
@@ -66,17 +49,26 @@ h1 {
     box-shadow: inset 2px 2px 10px black, inset -2px -2px 10px black;
     transition: all 0.5s ease-in-out;
     z-index: 1;
+    transition: 3s ease-in-out;
+
+}
+
+.planet:hover{
+    transform: scale(2);
+    z-index: 100;
 }
 
 .info {
-
+    
     display: flex;
     position: absolute;
-    width: 200px;
-    height: 150px;
-
+    width: fit-content;
+    height: fit-content;
+    min-height: 150px;
+    min-width: 250px;
+    
     flex-direction: column;
-
+    
     background-color: #1b1743b5;
     top: 50%;
     /* Pongo el borde superior del div en el centro del planeta */
@@ -85,14 +77,12 @@ h1 {
     pointer-events: none;
     transition: opacity 1s ease-in-out;
     border-radius: 10px;
-
+    
     opacity: 0;
 }
 
 .planet:hover {
-    transform: scale(3);
     z-index: 100;
-
 }
 
 .planet:hover .info {
@@ -101,11 +91,11 @@ h1 {
 
 
 @keyframes planet_rotation {
-
+    
     0% {
         background-position: 0%;
     }
-
+    
     100% {
         background-position: 200%;
     }
@@ -117,19 +107,19 @@ h1 {
 
 .sun {
     margin-left: -10%;
-
+    
     width: 300px;
     height: 300px;
     border-radius: 300px;
-
+    
     background-image: url("src/assets/planets/sun.jpg");
     background-repeat: repeat;
     background-size: cover;
     box-shadow: 2px 2px 100px #fac68a, -2px -2px 10px #fac68a,
-        /* Brillo exterior del sol */
-        inset 2px 2px 100px rgb(255, 201, 92), inset -2px -2px 10px rgb(255, 201, 92);
+    /* Brillo exterior del sol */
+    inset 2px 2px 100px rgb(255, 201, 92), inset -2px -2px 10px rgb(255, 201, 92);
     /* Brillo interior del sol */
-
+    
     animation: planet_rotation 200s linear infinite;
     z-index: 10;
     transition: all 1.5s ease-in-out;
@@ -154,7 +144,7 @@ h1 {
 }
 
 .sun:hover .info {
-
+    
     opacity: 1;
 }
 
@@ -163,17 +153,17 @@ h1 {
 /*-----------------------------------------------------------------------*/
 
 .mercury {
-
+    
     width: 22.5px;
     height: 22.5px;
     border-radius: 22.5px;
     background-image: url("src/assets/planets/mercury.jpg");
     animation: planet_rotation 586s linear infinite;
-
+    
 }
 
 .venus {
-
+    
     width: 30px;
     height: 30px;
     border-radius: 30px;
@@ -182,7 +172,7 @@ h1 {
 }
 
 .venus-atmosphere {
-
+    
     position: absolute;
     width: 30px;
     height: 30px;
@@ -207,7 +197,7 @@ h1 {
 }
 
 .earth-atmosphere {
-
+    
     position: absolute;
     width: 42.5px;
     height: 42.5px;
@@ -221,7 +211,7 @@ h1 {
 }
 
 .mars {
-
+    
     width: 30px;
     height: 30px;
     border-radius: 30px;
@@ -230,7 +220,7 @@ h1 {
 }
 
 .jupiter {
-
+    
     width: 70px;
     height: 70px;
     border-radius: 70px;
@@ -239,7 +229,7 @@ h1 {
 }
 
 .saturn {
-
+    
     width: 60px;
     height: 60px;
     border-radius: 60px;
@@ -252,51 +242,61 @@ h1 {
     position: absolute;
     width: 150px;
     height: 30px;
-
+    
     top: 50%;
     transform: translate(-30%, -50%) rotateZ(20deg);
-
+    
     background: radial-gradient(circle at center, transparent 30%, rgba(232, 206, 159, 0.4)), url("src/assets/planets/asteroids.png") center;
-
+    
     /*background: rgba(233, 211, 169, 0.508);*/
     border-radius: 50%;
-
+    
 }
 
 
 .uranus {
-
+    
     width: 50px;
     height: 50px;
     border-radius: 50px;
     background-image: url("src/assets/planets/uranus.jpg");
     animation: planet_rotation 7s linear infinite;
-
+    
 }
 
 .neptune {
-
+    
     width: 45px;
     height: 45px;
     border-radius: 45px;
     background-image: url("src/assets/planets/neptune.jpg");
     animation: planet_rotation 6.6s linear infinite;
-
+    
 }
 
-h2 {
-
+.system-solar h2 {
+    
     margin-top: 10px;
     color: white;
-    font-size: 14px;
+    font-size: 24px;
     text-align: center;
 }
 
-p {
-
+.system-solar p {
+    
     color: white;
     width: fit-content;
     height: fit-content;
-    font-size: 10px;
+    font-size: 16px;
     padding: 10px;
+}
+@keyframes bg_rotation {
+
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 370%;
+    }
 }

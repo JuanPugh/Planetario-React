@@ -1,0 +1,106 @@
+*{
+  margin: 0;
+}
+body{
+  background-color: #212529;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 40%;
+  bottom: 0;
+  height: 300px;
+  width: 100%;
+  grid-row: 3;
+  background: linear-gradient(#00091917, #000e2533, #00000049);
+
+  align-items: center;
+  justify-content: center;
+  font-family: Rajdhani;
+
+}
+
+footer nav {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(3, 250px);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 20px;
+  column-gap: 80px;
+  justify-items: center;
+}
+
+footer nav a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/*---------------------------------------------------------*/
+
+.box {
+  display: flex;
+  transition: all .1s ease-in-out;
+  opacity: .5;
+}
+
+.box:hover {
+  opacity: 1;
+  scale: 1.3;
+  color: #ffffff;
+}
+
+.image {
+  position: relative;
+  padding-right: 5px;
+  bottom: 5px;
+  width: 30px;
+  height: 30px;
+  filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);
+}
+
+footer p {
+  color: #ffffff;
+  font-weight: bold;
+  font-style: italic;
+  opacity: 0.2;
+}
+
+/*---------------------------------------------------------*/
+
+.location {
+  grid-column: 1;
+}
+
+/*---------------------------------------------------------*/
+
+.number {
+  grid-column: 2;
+}
+
+/*---------------------------------------------------------*/
+
+.school-page {
+  grid-column: 3;
+}
+
+/*---------------------------------------------------------*/
+
+.facebook-page {
+  grid-column: 1/2;
+}
+
+/*---------------------------------------------------------*/
+
+.instagram-page {
+  grid-column: 2/2;
+}
+
+/*---------------------------------------------------------*/
+
+.twitter-page {
+  grid-column: 4/3;
+}
+
+/*---------------------------------------------------------*/

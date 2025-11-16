@@ -1,3 +1,4 @@
+import "../CSS/header.css";
 export default function Header() {
 
     return (
@@ -22,13 +23,6 @@ export default function Header() {
                     <a href="solar_system.html" class="card">
                         <img src="src/assets/png/book.png" alt="Icono de libro" title="¡Aprende sobre el sistema solar!" width="512" height="512" class="front-face" />
                         <span class="back-face">Aprender</span>
-                    </a>
-                </div>
-
-                <div class="container-card">
-                    <a href="nosotros.html" class="card">
-                        <img src="src/assets/png/team.png" alt="Icono de grupo" title="¡Enterate sobre nosotros!" width="512" height="1000" class="front-face" />
-                        <span class="back-face">Nosotros</span>
                     </a>
                 </div>
 

@@ -1,4 +1,4 @@
-.container {
+.container-horarios {
     flex-wrap: wrap;
     position: relative;
     padding: 30px;
@@ -18,7 +18,7 @@
     filter: saturate(95%);
 }
 
-.container h2 {
+.container-horarios h2 {
     margin: 5%;
 
     text-align: center;
@@ -63,7 +63,7 @@
     height: 50px;
     width: 200px;
 
-    background-image: url("src/assets/Horarios/Horarios/bg_cell.jpg");
+    background-image: url("src/assets/Horarios/bg_cell.jpg");
     background-blend-mode: darken;
     background-color: #00091962;
     background-size: cover;
@@ -86,7 +86,7 @@
 }
 
 .fila:first-child .celda {
-    background-image: url("src/assets/Horarios/Horarios/bg_row1.jpg");
+    background-image: url("src/assets/Horarios/bg_row1.jpg");
     background-blend-mode: darken;
 
     font-weight: bolder;

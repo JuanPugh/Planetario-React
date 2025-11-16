@@ -1,4 +1,4 @@
-//import styles from "../CSS/solar_system.module.css";
+import "../CSS/solar_system.css";
 import Planet from "../components/planet";
 
 function showinfo(element) {
@@ -23,13 +23,13 @@ function showinfo(element) {
 export default function SolarSystem() {
 
     return (
-        <div>
-            <div className={styles.title}> <h1>SISTEMA SOLAR</h1> </div>
+        <div className="system-solar">
+            <div className="title"> <h1>SISTEMA SOLAR</h1> </div>
 
 
-            <div className={`styles.container planet`}>
-                <div className="sun" onmouseover="showinfo(this)">
-                    <div class="info">
+            <div className="container-planet">
+                <div className="sun" onMouseOver={(e) => showinfo(e.currentTarget)}>
+                    <div className="info">
                         <h2>Sol</h2>
                         <p>El Sol es una estrella de tipo G2V compuesta principalmente por hidrógeno
                             y helio, que genera energía mediante fusión nuclear. Tiene un diámetro
@@ -45,9 +45,9 @@ export default function SolarSystem() {
                             Carece de lunas."></Planet>
 
 
-                <div class="planet venus" onmouseover="showinfo(this)">
-                    <div class="venus-atmosphere"></div>
-                    <div class="info">
+                <div className="planet venus" onMouseOver={(e) => showinfo(e.currentTarget)}>
+                    <div className="venus-atmosphere"></div>
+                    <div className="info">
                         <h2>Venus</h2>
                         <p>Similar en tamaño y composición a la Tierra, pero con una atmósfera densa y tóxica que atrapa el calor.
                             Es el planeta más caliente, con temperaturas superiores a los 460 °C.
@@ -55,9 +55,9 @@ export default function SolarSystem() {
                     </div>
                 </div>
 
-                <div class="planet earth" onmouseover="showinfo(this)">
-                    <div class="earth-atmosphere"></div>
-                    <div class="info">
+                <div className="planet earth" onMouseOver={(e) => showinfo(e.currentTarget)}>
+                    <div className="earth-atmosphere"></div>
+                    <div className="info">
                         <h2>Tierra</h2>
                         <p>La Tierra es un planeta rocoso con un diámetro de 12,742 km,
                             compuesto principalmente de hierro, oxígeno y silicio.
@@ -67,8 +67,8 @@ export default function SolarSystem() {
                     </div>
                 </div>
 
-                <div class="planet mars" onmouseover="showinfo(this)">
-                    <div class="info">
+                <div className="planet mars" onMouseOver={(e) => showinfo(e.currentTarget)}>
+                    <div className="info">
                         <h2>Marte</h2>
                         <p>Marte es un planeta rocoso con atmósfera de dióxido de carbono,
                             temperaturas frías y superficie roja. Tiene montañas, valles
@@ -77,8 +77,8 @@ export default function SolarSystem() {
                     </div>
                 </div>
 
-                <div class="planet jupiter" onmouseover="showinfo(this)">
-                    <div class="info">
+                <div className="planet jupiter" onMouseOver={(e) => showinfo(e.currentTarget)}>
+                    <div className="info">
                         <h2>Júpiter</h2>
                         <p>Es el planeta más grande del Sistema Solar, compuesto principalmente de gas.
                             Tiene una famosa Gran Mancha Roja, una tormenta gigantesca que ha durado siglos.
@@ -86,8 +86,8 @@ export default function SolarSystem() {
                     </div>
                 </div>
 
-                <div class="planet saturn" onmouseover="showinfo(this)">
-                    <div class="info">
+                <div className="planet saturn" onMouseOver={(e) => showinfo(e.currentTarget)}>
+                    <div className="info">
                         <h2>Saturno</h2>
                         <p>Saturno es un gigante gaseoso conocido por sus impresionantes anillos
                             compuestos de hielo y roca. Tiene un diámetro de 120,536 km y una atmósfera de hidrógeno y helio.
@@ -95,8 +95,8 @@ export default function SolarSystem() {
                     </div>
                 </div>
 
-                <div class="planet uranus" onmouseover="showinfo(this)">
-                    <div class="info">
+                <div className="planet uranus" onMouseOver={(e) => showinfo(e.currentTarget)}>
+                    <div className="info">
                         <h2>Urano</h2>
                         <p>Urano es un gigante helado con una atmósfera de hidrógeno,
                             helio y metano. Tiene un color azul verdoso debido al metano
@@ -105,8 +105,8 @@ export default function SolarSystem() {
                     </div>
                 </div>
 
-                <div class="planet neptune" onmouseover="showinfo(this)">
-                    <div class="info">
+                <div className="planet neptune" onMouseOver={(e) => showinfo(e.currentTarget)}>
+                    <div className="info">
                         <h2>Neptuno</h2>
                         <p>Es el planeta más alejado del Sol y tiene una atmósfera muy activa con vientos extremadamente fuertes.
                             De color azul profundo debido al metano en su atmósfera.

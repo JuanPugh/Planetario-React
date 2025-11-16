@@ -1,47 +1,46 @@
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { Link } from "react-router-dom";
-//import styles from "../CSS/inicio.module.css";
+import "../CSS/inicio.css";
 
 export default function Inicio() {
     return (
-        <div>
-            <div class="container-element">
+            <div className="container-element">
 
                 <Header />
 
-                <section class="content">
-                    <a href="#" class="servicios cont">
-                        <h2>Servicios</h2>
-                        <p>Mas acerca de nuestros Servicios &RightArrow;</p>
+                <section className="content-inicio">
+                    <a href="#" className="servicios cont">
+                        <h2>Nosotros</h2>
+                        <p>Mas acerca de nosotros</p>
                     </a>
-                    <a href="#" class="recorridos half">
+                    <a href="#" className="recorridos half">
                         <h2>Recorridos</h2>
                         <p>Al infinito y...</p>
                     </a>
-                    <Link to="/Horarios" class="horarios half">
+                    <Link to="/Horarios" className="horarios half">
                         <h2>Horarios</h2>
-                        <p>Cuando puedes visitarnos &starf;</p>
+                        <p>Cuando puedes visitarnos</p>
                     </Link>
-                    <a href="#" class="ubicacion half">
+                    <a href="#" className="ubicacion half">
                         <h2>Ubicanos</h2>
-                        <p>El lugar perfecto &star;</p>
+                        <p>El lugar perfecto</p>
                     </a>
-                    <Link to="/GalaxiasVecinas" class="galaxias half">
+                    <Link to="/GalaxiasVecinas" className="galaxias half">
                         <h2>Galaxias Vecinas</h2>
                         <p>Estamos solos?</p>
                     </Link>
 
-                    <Link to="/SolarSystem" class="educacion cont">
+                    <Link to="/SolarSystem" className="educacion cont">
                         <h2>Aprende acerca de nuestro hogar</h2>
-                        <p>Espacio educativo &RightArrow;</p>
+                        <p>Espacio educativo</p>
                     </Link>
 
-                    <a href="productos.html" class="productos cont">
+                    <a href="productos.html" className="productos cont">
                         <h2>Productos</h2>
                         <p>Nuevas emociones &#128230;</p>
                     </a>
-                    <a href="#" class="novedades cont">
+                    <a href="#" className="novedades cont">
                         <h2>Novedades</h2>
                         <p>Enterate de lo mas reciente &#9668;</p>
                     </a>
@@ -50,7 +49,6 @@ export default function Inicio() {
                 <Footer />
 
             </div>
-        </div >
     );
 }
 
