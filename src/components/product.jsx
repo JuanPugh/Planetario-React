@@ -29,7 +29,7 @@ const Product = ({ product }) => {
                 <p>
                     {product.description}
                 </p>
-                <button>AGREGAR</button>
+                <button>Agregar</button>
                 {
                     <>
                         <Button text="Editar" onClick={() => navigate("/Productos/edit/" + product.id)} />
