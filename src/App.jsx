@@ -6,6 +6,7 @@ import Horarios from './pages/Horarios.jsx'
 import GalaxiasVecinas from './pages/GalaxiasVecinas.jsx'
 import Productos from './pages/Productos.jsx'
 import AddProducts from './pages/AddProduct.jsx'
+import EditProduct from './pages/EditProduct.jsx'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/GalaxiasVecinas' element={<GalaxiasVecinas />} />
         <Route path='/Productos' element={<Productos />} />
         <Route path='/Productos/add' element={<AddProducts />} />
+        <Route path='/Productos/edit/:id' element={<EditProduct />} />
       </Routes>
     </Router>
   )

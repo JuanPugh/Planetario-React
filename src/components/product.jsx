@@ -1,8 +1,26 @@
+import { deleteDoc } from "firebase/firestore";
+import { db } from "../firebase/config";
+import Button from "./button";
+import { useNavigate } from "react-router-dom";
+
+function DeleteProduct(id) {
+
+    deleteDoc(doc(db, "products", id))
+        .then(() => {
+            console.log("Product deleted");
+        })
+        .catch(err => console.error(err));
+
+}
+
 const Product = ({ product }) => {
+
+    const navigate = useNavigate();
+
     return (
         <div class="card">
             <div class="front-face">
-                <img src="img/logo.png" alt="" />
+                <img src={"" + product.image + ""} alt="" />
                 <div class="nombre">
                     <p>{product.name}</p>
                 </div>
@@ -12,6 +30,12 @@ const Product = ({ product }) => {
                     {product.description}
                 </p>
                 <button>AGREGAR</button>
+                {
+                    <>
+                        <Button text="Editar" onClick={() => navigate("/Productos/edit/" + product.id)} />
+                        <Button text="Eliminar" onClick={() => DeleteProduct(product.id)} />
+                    </>
+                }
             </span>
         </div>
     );

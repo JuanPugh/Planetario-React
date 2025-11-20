@@ -1,21 +1,35 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Button from "../components/button";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, getDoc, doc } from "firebase/firestore";
 import { db } from "../firebase/config";
 //import { useAuth, User } from "../components/AuthContext";
 import { useForm } from "react-hook-form";
+import { useParams } from "react-router-dom";
 
 
-function AddProducts() {
+function EditProduct() {
 
     const formRef = useRef();
     const { register, handleSubmit } = useForm();
+
+    const { id } = useParams();
+
+    useEffect(() => {
+        const ref = doc(db, "products", id);
+        getDoc(ref)
+            .then((resp) => {
+                console.log(resp.data());
+            })
+    })
 
     /*
     if (!user?.isAdmin) {
         return (<Navigate replace={true} to="/products" />)
     }
     */
+
+    //console.log(product);
+
 
     const submit = async (data) => {
 
@@ -26,10 +40,10 @@ function AddProducts() {
             }
         }
 
-        const productsRef = collection(db, "products");
 
-        addDoc(productsRef, data);
-        alert("Producto añadido!");
+
+        setDoc(productRef, data);
+        alert("Producto actualizado!");
         formRef?.current?.reset();
 
         //return (<Navigate replace={true} to="/login" />)
@@ -57,4 +71,4 @@ function AddProducts() {
         </>
     )
 
-} export default AddProducts;
+} export default EditProduct;
