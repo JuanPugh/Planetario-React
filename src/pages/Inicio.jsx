@@ -36,10 +36,10 @@ export default function Inicio() {
                         <p>Espacio educativo</p>
                     </Link>
 
-                    <a href="productos.html" className="productos cont">
+                    <Link to="/Productos" className="productos cont">
                         <h2>Productos</h2>
                         <p>Nuevas emociones &#128230;</p>
-                    </a>
+                    </Link>
                     <a href="#" className="novedades cont">
                         <h2>Novedades</h2>
                         <p>Enterate de lo mas reciente &#9668;</p>
