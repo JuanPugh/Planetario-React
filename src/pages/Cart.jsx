@@ -19,7 +19,7 @@ export default function Cart() {
 
 
 
-                <div className="flex-vertical cart">
+                <div className="form cart">
 
                     <h1>Carrito</h1>
 
@@ -29,7 +29,7 @@ export default function Cart() {
                         <div key={item.id}>
                             <p>{item.name} x {item.qty}</p>
                             <p>${item.price * item.qty}</p>
-                            <button onClick={() => removeFromCart(item.id)}>
+                            <button className="submit" onClick={() => removeFromCart(item.id)}>
                                 eliminar
                             </button>
                         </div>
@@ -38,7 +38,7 @@ export default function Cart() {
                     <h2>Total: ${total}</h2>
 
                     {cart.length > 0 && (
-                        <button onClick={clearCart}>
+                        <button className="submit" onClick={clearCart}>
                             Vaciar carrito
                         </button>
                     )}

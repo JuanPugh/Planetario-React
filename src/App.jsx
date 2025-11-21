@@ -9,6 +9,7 @@ import Productos from './pages/Productos.jsx'
 import AddProducts from './pages/AddProduct.jsx'
 import EditProduct from './pages/EditProduct.jsx'
 import Login from './pages/Login.jsx'
+import Recorridos from './pages/Recorridos.jsx'
 import Register from './pages/Register.jsx'
 import Cart from './pages/Cart.jsx'
 import { AuthProvider } from './components/AuthContext.jsx'
@@ -29,6 +30,7 @@ function App() {
             <Route path='/Horarios' element={<Horarios />} />
             <Route path='/GalaxiasVecinas' element={<GalaxiasVecinas />} />
             <Route path='/Productos' element={<Productos />} />
+            <Route path='/Recorridos' element={<Recorridos />} />
             <Route path='/Productos/add' element={<AddProducts />} />
             <Route path='/Productos/edit/:id' element={<EditProduct />} />
             <Route path='/Cart' element={<Cart />} />

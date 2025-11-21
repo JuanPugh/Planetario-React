@@ -16,19 +16,19 @@ export default function Inicio() {
             <Header />
 
             <section className="content-inicio">
-                <a href="#" className="servicios cont">
+                <Link to="/Nosotros" className="servicios cont">
                     <h2>Nosotros</h2>
                     <p>Mas acerca de nosotros</p>
-                </a>
-                <a href="#" className="recorridos half">
+                </Link>
+                <Link to="/Recorridos" className="recorridos half">
                     <h2>Recorridos</h2>
                     <p>Al infinito y...</p>
-                </a>
+                </Link>
                 <Link to="/Horarios" className="horarios half">
                     <h2>Horarios</h2>
                     <p>Cuando puedes visitarnos</p>
                 </Link>
-                <a href="#" className="ubicacion half">
+                <a href="https://www.google.com/maps/dir//Lanín+2020,+Q8300+Neuquén/@-38.9648456,-68.1290172,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x960a33b795c819a7:0x65c00b69eb2c3f1d!2m2!1d-68.0877317!2d-38.9648529?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D" className="ubicacion half">
                     <h2>Ubicanos</h2>
                     <p>El lugar perfecto</p>
                 </a>
