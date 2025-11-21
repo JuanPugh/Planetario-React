@@ -5,19 +5,21 @@ import { db } from "../firebase/config";
 //import { useAuth, User } from "../components/AuthContext";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../components/AuthContext";
 
 
 function AddProducts() {
 
     const formRef = useRef();
+    const { user } = useAuth();
     const { register, handleSubmit } = useForm();
     const navigate = useNavigate();
 
-    /*
+
     if (!user?.isAdmin) {
-        return (<Navigate replace={true} to="/products" />)
+        return navigate("/Productos");
     }
-    */
+
 
     const submit = async (data) => {
 

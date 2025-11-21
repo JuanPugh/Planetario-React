@@ -32,6 +32,7 @@ function App() {
             <Route path='/Productos/add' element={<AddProducts />} />
             <Route path='/Productos/edit/:id' element={<EditProduct />} />
             <Route path='/Cart' element={<Cart />} />
+            <Route path='*' element={<Inicio />} />
 
           </Routes>
         </Router>

@@ -37,3 +37,22 @@
 p {
     color: white;
 }
+
+.container-cart {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.cart {
+    display: flex;
+    gap: 10px;
+}
+
+.cart h1 {
+    margin: 50px;
+}
+
+.cart * {
+    color: white;
+}

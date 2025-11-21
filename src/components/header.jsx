@@ -45,6 +45,11 @@ export default function Header() {
                     isLoggedIn &&
 
                     <div className="user-setting">
+                        <div className="container-card">
+                            <Link to="/Cart" className="card-header">
+                                <img src="src/assets/png/carrito.png" alt="image_carrito" title="¡Ve lo que hay en tu carrito de compras!" width="512" height="512" className="front-face" />
+                            </Link>
+                        </div>
                         <Button text="Cerrar sesion" onClick={LogOut} />
                         <p>{user?.name}</p>
 

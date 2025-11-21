@@ -18,7 +18,7 @@ function DeleteProduct(id) {
 const Product = ({ product }) => {
 
 
-    const { user } = useAuth();
+    const { user, isLoggedIn } = useAuth();
     const { addToCart } = useCart();
     const navigate = useNavigate();
 
@@ -37,7 +37,15 @@ const Product = ({ product }) => {
                 <p>
                     {product.description}
                 </p>
-                <Button text="Comprar" onClick={() => addToCart(product)} />
+                <Button text="Comprar" onClick={() => {
+
+                    if (isLoggedIn) {
+
+                        addToCart(product)
+                    } else {
+                        alert("¡No puedes añadir al carrito sin una cuenta de usuario!")
+                    }
+                }} />
                 {
                     user?.isAdmin &&
                     <>

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Button from "../components/button";
 import { collection, getDoc, doc, setDoc } from "firebase/firestore";
 import { db } from "../firebase/config";
-//import { useAuth, User } from "../components/AuthContext";
+import { useAuth } from "../components/AuthContext";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -11,13 +11,16 @@ import { useNavigate } from "react-router-dom";
 function EditProduct() {
 
     const formRef = useRef();
+    const { user } = useAuth();
     const { register, handleSubmit } = useForm();
-    const [ product, setProduct ] = useState();
+    const [product, setProduct] = useState();
 
     const { id } = useParams();
     const navigate = useNavigate();
 
-
+    if (!user?.isAdmin) {
+        return navigate("/Productos");
+    }
 
     useEffect(() => {
         const ref = doc(db, "products", id);
@@ -49,7 +52,7 @@ function EditProduct() {
 
         setDoc(productRef, data);
         alert("Producto actualizado!");
-        
+
 
         navigate("/Productos");
     }
@@ -62,7 +65,7 @@ function EditProduct() {
                 <h1 className="title">Editar un producto</h1>
 
                 {
-                    product && 
+                    product &&
                     <>
                         <input type="text" defaultValue={product.name} placeholder="Ingresa su nombre" {...register("name")} />
                         <input type="text" defaultValue={product.description} placeholder="Ingresa su descripcion" {...register("description")} />
@@ -73,13 +76,13 @@ function EditProduct() {
                         <div>
 
                             <Button text="Editar" type="submit" className="submit rounded white-bg" />
-                            <Button text="Volver" type="button" onClick={ () => navigate("/Productos")} />
-                            
+                            <Button text="Volver" type="button" onClick={() => navigate("/Productos")} />
+
                         </div>
                     </>
                 }
 
-                
+
 
             </form>
         </div>
