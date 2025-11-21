@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Input from "../components/input";
 import Button from "../components/button";
+import "../CSS/login.css";
 import { useNavigate, Link } from "react-router-dom";
 import Header from "../components/header";
 import { collection, getDocs, query, where } from "firebase/firestore";
