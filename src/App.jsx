@@ -1,6 +1,7 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Inicio from './pages/Inicio.jsx'
+import Inicio from "./pages/inicio.jsx"
+import Nosotros from './pages/Nosotros.jsx'
 import SolarSystem from './pages/SolarSystem.jsx'
 import Horarios from './pages/Horarios.jsx'
 import GalaxiasVecinas from './pages/GalaxiasVecinas.jsx'
@@ -13,21 +14,17 @@ import { AuthProvider } from './components/AuthContext.jsx'
 
 function App() {
   return (
-    <AuthProvider>
-      <Router>
-        <Routes>
-          <Route path='/' element={<Inicio />} />
-          <Route path='/Login' element={<Login />} />
-          <Route path='/Register' element={<Register />} />
-          <Route path='/SolarSystem' element={<SolarSystem />} />
-          <Route path='/Horarios' element={<Horarios />} />
-          <Route path='/GalaxiasVecinas' element={<GalaxiasVecinas />} />
-          <Route path='/Productos' element={<Productos />} />
-          <Route path='/Productos/add' element={<AddProducts />} />
-          <Route path='/Productos/edit/:id' element={<EditProduct />} />
-        </Routes>
-      </Router>
-    </AuthProvider>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Inicio />} />
+        <Route path='/SolarSystem' element={<SolarSystem />} />
+        <Route path='/Nosotros' element={<Nosotros />} />
+        <Route path='/Horarios' element={<Horarios />} />
+        <Route path='/GalaxiasVecinas' element={<GalaxiasVecinas />} />
+        <Route path='/Productos' element={<Productos />} />
+        <Route path='/Productos/add' element={<AddProducts />} />
+      </Routes>
+    </Router>
   )
 }
 
