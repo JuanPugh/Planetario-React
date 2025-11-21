@@ -34,10 +34,8 @@ export default function Header() {
                 {
                     !isLoggedIn &&
                     <div className="container-card">
-                        <Link to="/Login" className="card">
+                        <Link to="/Login" className="card-header">
                             <img src="src/assets/png/login.png" alt="image_login" title="¡Inicia sesion en tu cuenta!" width="512" height="512" className="front-face" />
-                            <span className="back-face">
-                                Login</span>
                         </Link>
                     </div>
 
@@ -46,9 +44,9 @@ export default function Header() {
                 {
                     isLoggedIn &&
 
-                    <div>
+                    <div className="user-setting">
                         <Button text="Cerrar sesion" onClick={LogOut} />
-                        {user?.name}
+                        <p>{user?.name}</p>
 
                     </div>
 
