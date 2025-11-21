@@ -16,15 +16,15 @@ export default function Productos() {
 
 
     useEffect(() => {
-            try {
-                const productsRef = collection(db, "products");
-                getDocs(productsRef)
-                    .then((resp) => {
-                        setProducts(resp.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-                    });
-            } catch (error) {
-                console.error("Error obteniendo los productos: ", error);
-            }
+        try {
+            const productsRef = collection(db, "products");
+            getDocs(productsRef)
+                .then((resp) => {
+                    setProducts(resp.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+                });
+        } catch (error) {
+            console.error("Error obteniendo los productos: ", error);
+        }
     }, []);
 
 
@@ -32,15 +32,15 @@ export default function Productos() {
     return (
         <div className="productos-box">
             <Header />
-            <div class="container-product">
+            <div className="container-product">
 
                 <div>
                     <h2>Productos</h2>
                     <Button text="Añadir productos" onClick={() => navigate("/Productos/add")} />
-                    
+
                 </div>
                 <ProductList products={products} />
-                    
+
             </div>
             <Footer />
         </div>

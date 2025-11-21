@@ -3,6 +3,7 @@ import { db } from "../firebase/config";
 import Button from "./button";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "./AuthContext";
+import { useCart } from "./CartContext";
 
 function DeleteProduct(id) {
 
@@ -18,21 +19,22 @@ const Product = ({ product }) => {
 
 
     const { user } = useAuth();
+    const { addToCart } = useCart();
     const navigate = useNavigate();
 
     return (
-        <div class="card">
-            <div class="front-face">
+        <div className="card">
+            <div className="front-face">
                 <img src={"" + product.image + ""} alt="" />
-                <div class="nombre">
+                <div className="nombre">
                     <p>{product.name}</p>
                 </div>
             </div>
-            <span class="back-face">
+            <span className="back-face">
                 <p>
                     {product.description}
                 </p>
-                <Button text="Comprar" />
+                <Button text="Comprar" onClick={() => addToCart(product)} />
                 {
                     user?.isAdmin &&
                     <>
