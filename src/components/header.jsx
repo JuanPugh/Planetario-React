@@ -19,7 +19,7 @@ export default function Header() {
             <nav>
 
                 <div className="container-card">
-                    <Link to="/Inicio" className="card">
+                    <Link to="/" className="card">
                         <img src="src/assets/png/home.png" alt="Icono de Inicio" title="¡Ve al inicio!" width="512" height="512" className="front-face" />
                         <span className="back-face">Inicio</span>
 
