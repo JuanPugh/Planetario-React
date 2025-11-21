@@ -2,6 +2,7 @@ import { deleteDoc } from "firebase/firestore";
 import { db } from "../firebase/config";
 import Button from "./button";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "./AuthContext";
 
 function DeleteProduct(id) {
 
@@ -15,6 +16,8 @@ function DeleteProduct(id) {
 
 const Product = ({ product }) => {
 
+
+    const { user } = useAuth();
     const navigate = useNavigate();
 
     return (
@@ -29,9 +32,11 @@ const Product = ({ product }) => {
                 <p>
                     {product.description}
                 </p>
-                <button>Agregar</button>
+                <Button text="Comprar" />
                 {
+                    user?.isAdmin &&
                     <>
+
                         <Button text="Editar" onClick={() => navigate("/Productos/edit/" + product.id)} />
                         <Button text="Eliminar" onClick={() => DeleteProduct(product.id)} />
                     </>
