@@ -10,7 +10,7 @@ export default function Inicio() {
                 <Header />
 
                 <section className="content-inicio">
-                    <a href="#" className="servicios cont">
+                    <a href="/Nosotros" className="servicios cont">
                         <h2>Nosotros</h2>
                         <p>Mas acerca de nosotros</p>
                     </a>

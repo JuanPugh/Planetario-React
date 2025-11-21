@@ -1,4 +1,6 @@
 import "../CSS/header.css";
+import { Link } from "react-router-dom";
+
 export default function Header() {
 
     return (
@@ -12,25 +14,24 @@ export default function Header() {
             <nav>
 
                 <div class="container-card">
-                    <a href="index.html" class="card">
+                    <Link to="/" class="card">
                         <img src="src/assets/png/home.png" alt="Icono de Inicio" title="¡Ve al inicio!" width="512" height="512" class="front-face" />
                         <span class="back-face">Inicio</span>
-
-                    </a>
+                    </Link>
                 </div>
 
                 <div class="container-card">
-                    <a href="solar_system.html" class="card">
+                    <Link to="/SolarSystem" class="card">
                         <img src="src/assets/png/book.png" alt="Icono de libro" title="¡Aprende sobre el sistema solar!" width="512" height="512" class="front-face" />
                         <span class="back-face">Aprender</span>
-                    </a>
+                    </Link>
                 </div>
 
                 <div class="container-card">
-                    <a href="login.html" class="card">
+                    <Link to="/Login" class="card">
                         <img src="src/assets/png/login.png" alt="image_login" title="¡Inicia sesion en tu cuenta!" width="512" height="512" class="front-face" />
                         <span class="back-face">Login</span>
-                    </a>
+                    </Link>
                 </div>
 
 

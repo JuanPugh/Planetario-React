@@ -1,6 +1,7 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Inicio from "./pages/inicio.jsx"
+import Nosotros from './pages/Nosotros.jsx'
 import SolarSystem from './pages/SolarSystem.jsx'
 import Horarios from './pages/Horarios.jsx'
 import GalaxiasVecinas from './pages/GalaxiasVecinas.jsx'
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Inicio />} />
         <Route path='/SolarSystem' element={<SolarSystem />} />
+        <Route path='/Nosotros' element={<Nosotros />} />
         <Route path='/Horarios' element={<Horarios />} />
         <Route path='/GalaxiasVecinas' element={<GalaxiasVecinas />} />
         <Route path='/Productos' element={<Productos />} />
