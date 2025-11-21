@@ -21,6 +21,9 @@ export default function Nosotros() {
                     <li>
                         <p>Joaquín Carrasco: Comunicador científico, encargado de las actividades educativas y visitas guiadas, adaptando la divulgación para públicos de todas las edades.</p>
                     </li>
+                    <li>
+                        <p>Maximiliano Sanchez: Técnico en sistemas, responsable del mantenimiento y actualización de los equipos tecnológicos del planetario.</p>
+                    </li>
                 </ul>
                 <h3>Nuestra misión</h3>
                 <p>Nos mueve el deseo de despertar el interés por la astronomía y la ciencia en la comunidad. Queremos que cada persona que nos visite sienta la misma curiosidad y asombro que nos llevó a iniciar este proyecto. Creemos que la ciencia y el conocimiento pueden transformar a las personas y que el planetario puede ser un lugar de encuentro y aprendizaje continuo.</p>
