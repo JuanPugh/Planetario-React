@@ -52,7 +52,7 @@ function AddProducts() {
 
                 <div>
                     <Button text="Registrar" type="submit" className="submit rounded white-bg" />
-                    <Button text="Volver" type="button" onClick={ () => navigate("/Productos")} />
+                    <Button text="Volver" type="button" onClick={() => navigate("/Productos")} />
                 </div>
 
             </form>

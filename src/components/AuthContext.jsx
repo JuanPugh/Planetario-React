@@ -19,14 +19,30 @@ export function AuthProvider({ children }) {
         () => localStorage.getItem("logged_user") === "true"
     );
 
-    const [user, setUser] = useState();
+    const [user, setUser] = useState(() => {
+        const stored = localStorage.getItem("user");
+        return stored ? JSON.parse(stored) : null;
+    });
+
+
+    useEffect(() => {
+        localStorage.setItem("user", JSON.stringify(user));
+    }, [user]);
 
     useEffect(() => {
         localStorage.setItem("logged_user", String(isLoggedIn));
+        localStorage.setItem("user", JSON.stringify(user));
     }, [isLoggedIn]);
 
-    const LogIn = () => setIsLoggedIn(true);
-    const LogOut = () => setIsLoggedIn(false);
+    const LogIn = (userData) => {
+        setIsLoggedIn(true);
+        setUser(userData);
+    }
+
+    const LogOut = () => {
+        setUser(null);
+        setIsLoggedIn(false)
+    };
 
 
     return (

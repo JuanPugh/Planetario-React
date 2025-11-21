@@ -1,5 +1,5 @@
 .flex-vertical {
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
 
@@ -31,4 +31,9 @@
 .container-form {
     display: flex;
     justify-content: center;
+}
+
+.container-form label,
+p {
+    color: white;
 }

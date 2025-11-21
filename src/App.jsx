@@ -8,6 +8,7 @@ import Productos from './pages/Productos.jsx'
 import AddProducts from './pages/AddProduct.jsx'
 import EditProduct from './pages/EditProduct.jsx'
 import Login from './pages/Login.jsx'
+import Register from './pages/Register.jsx'
 import { AuthProvider } from './components/AuthContext.jsx'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Inicio />} />
           <Route path='/Login' element={<Login />} />
+          <Route path='/Register' element={<Register />} />
           <Route path='/SolarSystem' element={<SolarSystem />} />
           <Route path='/Horarios' element={<Horarios />} />
           <Route path='/GalaxiasVecinas' element={<GalaxiasVecinas />} />

@@ -1,6 +1,12 @@
 import "../CSS/header.css";
 import { Link } from "react-router-dom";
+import { useAuth } from "./AuthContext";
+import Button from "./button";
+
 export default function Header() {
+
+    const { isLoggedIn, user, LogOut } = useAuth();
+
 
     return (
         <header>
@@ -27,13 +33,28 @@ export default function Header() {
                     </Link>
                 </div>
 
-                <div class="container-card">
-                    <Link to="/Login" class="card">
-                        <img src="src/assets/png/login.png" alt="image_login" title="¡Inicia sesion en tu cuenta!" width="512" height="512" class="front-face" />
-                        <span class="back-face">Login</span>
-                    </Link>
-                </div>
+                {
+                    !isLoggedIn &&
+                    <div class="container-card">
+                        <Link to="/Login" class="card">
+                            <img src="src/assets/png/login.png" alt="image_login" title="¡Inicia sesion en tu cuenta!" width="512" height="512" class="front-face" />
+                            <span class="back-face">
+                                Login</span>
+                        </Link>
+                    </div>
 
+                }
+
+                {
+                    isLoggedIn &&
+
+                    <div>
+                        <Button text="Cerrar sesion" onClick={LogOut} />
+                        {user?.name}
+
+                    </div>
+
+                }
 
             </nav>
 
