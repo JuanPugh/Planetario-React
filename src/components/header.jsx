@@ -19,17 +19,14 @@ export default function Header() {
             <nav>
 
                 <div className="container-card">
-                    <Link to="/" className="card">
+                    <Link to="/" className="card-header">
                         <img src="src/assets/png/home.png" alt="Icono de Inicio" title="¡Ve al inicio!" width="512" height="512" className="front-face" />
-                        <span className="back-face">Inicio</span>
-
                     </Link>
                 </div>
 
                 <div className="container-card">
-                    <Link to="/SolarSystem" className="card">
+                    <Link to="/SolarSystem" className="card-header">
                         <img src="src/assets/png/book.png" alt="Icono de libro" title="¡Aprende sobre el sistema solar!" width="512" height="512" className="front-face" />
-                        <span className="back-face">Aprender</span>
                     </Link>
 
                 </div>

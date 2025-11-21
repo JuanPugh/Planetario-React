@@ -111,3 +111,23 @@
     border: none;
     cursor: pointer;
 }
+
+.price {
+    width: 50%;
+    height: 15%;
+
+    border-radius: 25px;
+    text-align: center;
+    align-content: center;
+
+    margin-left: 25%;
+    margin-bottom: 10%;
+
+    background-color: #07437e79;
+}
+
+.price:before {
+    content: "Precio: $";
+    font-weight: bold;
+    color: #ffffff;
+}
