@@ -10,26 +10,32 @@ import AddProducts from './pages/AddProduct.jsx'
 import EditProduct from './pages/EditProduct.jsx'
 import Login from './pages/Login.jsx'
 import Register from './pages/Register.jsx'
+import Cart from './pages/Cart.jsx'
 import { AuthProvider } from './components/AuthContext.jsx'
+import { CartProvider } from './components/CartContext.jsx'
 
 function App() {
   return (
 
     <AuthProvider>
-      <Router>
-        <Routes>
-          <Route path='/' element={<Inicio />} />
-          <Route path='/Login' element={<Login />} />
-          <Route path='/Register' element={<Register />} />
-          <Route path='/SolarSystem' element={<SolarSystem />} />
-          <Route path='/Nosotros' element={<Nosotros />} />
-          <Route path='/Horarios' element={<Horarios />} />
-          <Route path='/GalaxiasVecinas' element={<GalaxiasVecinas />} />
-          <Route path='/Productos' element={<Productos />} />
-          <Route path='/Productos/add' element={<AddProducts />} />
+      <CartProvider>
+        <Router>
+          <Routes>
+            <Route path='/' element={<Inicio />} />
+            <Route path='/Login' element={<Login />} />
+            <Route path='/Register' element={<Register />} />
+            <Route path='/SolarSystem' element={<SolarSystem />} />
+            <Route path='/Nosotros' element={<Nosotros />} />
+            <Route path='/Horarios' element={<Horarios />} />
+            <Route path='/GalaxiasVecinas' element={<GalaxiasVecinas />} />
+            <Route path='/Productos' element={<Productos />} />
+            <Route path='/Productos/add' element={<AddProducts />} />
+            <Route path='/Productos/edit/:id' element={<EditProduct />} />
+            <Route path='/Cart' element={<Cart />} />
 
-        </Routes>
-      </Router>
+          </Routes>
+        </Router>
+      </CartProvider>
     </AuthProvider>
   )
 }
